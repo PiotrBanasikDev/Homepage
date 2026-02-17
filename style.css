@@ -1,15 +1,16 @@
 :root {
-    --primary-color: #1a365d;
-    --secondary-color: #2c5282;
+    --primary-color: #262f46;
+    --secondary-color: #262f46;
     --accent-color: #c49c5f;
-    --text-primary: #1a202c;
-    --text-secondary: #4a5568;
-    --bg-light: #f7fafc;
+    --accent-light: #c49c5f;
+    --text-primary: #0f1419;
+    --text-secondary: #5a5f6a;
+    --bg-light: #f5f5f5;
     --bg-white: #ffffff;
-    --border-color: #e2e8f0;
-    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
-    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
-    --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.15);
+    --border-color: #d4d4d4;
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.15);
+    --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.2);
+    --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.25);
 }
 
 * {
@@ -22,7 +23,7 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
     line-height: 1.6;
     color: var(--text-primary);
-    background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+    background: linear-gradient(135deg, #e8e8e8 0%, #d0d0d0 100%);
     min-height: 100vh;
 }
 
@@ -40,28 +41,28 @@ body {
 }
 
 .logo h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 700;
     color: var(--primary-color);
-    letter-spacing: -0.5px;
     margin-bottom: 0.5rem;
 }
 
 .divider {
     width: 80px;
-    height: 4px;
+    height: 3px;
     background: var(--accent-color);
     margin: 0 auto;
-    border-radius: 2px;
+    border-radius: 1px;
 }
 
 /* Main Content */
 .main-content {
     background: var(--bg-white);
-    border-radius: 12px;
+    border-radius: 4px;
     box-shadow: var(--shadow-lg);
     overflow: hidden;
     animation: fadeInUp 0.8s ease-out;
+    border: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 /* Profile Section */
@@ -72,6 +73,7 @@ body {
     padding: 3rem;
     background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
     color: white;
+    border-bottom: 3px solid var(--accent-color);
 }
 
 .profile-image-wrapper {
@@ -85,13 +87,13 @@ body {
     height: 250px;
     border-radius: 50%;
     object-fit: cover;
-    border: 6px solid rgba(255, 255, 255, 0.2);
+    border: 5px solid rgba(255, 255, 255, 0.15);
     box-shadow: var(--shadow-lg);
     transition: transform 0.3s ease;
 }
 
 .profile-image:hover {
-    transform: scale(1.05);
+    transform: scale(1.03);
 }
 
 .profile-info {
@@ -104,14 +106,15 @@ body {
     font-size: 3rem;
     font-weight: 700;
     margin-bottom: 0.5rem;
-    letter-spacing: -1px;
+    letter-spacing: 1px;
 }
 
 .title {
     font-size: 1.5rem;
-    color: var(--accent-color);
+    color: var(--accent-light);
     margin-bottom: 1.5rem;
     font-weight: 500;
+    letter-spacing: 2px;
 }
 
 .description {
@@ -122,16 +125,18 @@ body {
 
 /* Contact Section */
 .contact-section {
-    padding: 3rem;
+    padding: 2.5rem 3rem;
 }
 
 .section-title {
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 700;
     color: var(--primary-color);
-    margin-bottom: 2rem;
+    margin-bottom: 1.25rem;
     position: relative;
     padding-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .section-title::after {
@@ -139,40 +144,35 @@ body {
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 60px;
-    height: 3px;
+    width: 50px;
+    height: 2px;
     background: var(--accent-color);
-    border-radius: 2px;
+    border-radius: 1px;
 }
 
 .contact-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
 }
 
 .contact-card {
     display: flex;
-    gap: 1.5rem;
-    padding: 2rem;
-    background: var(--bg-light);
-    border-radius: 8px;
-    border: 1px solid var(--border-color);
-    transition: all 0.3s ease;
-}
-
-.contact-card:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-md);
-    border-color: var(--accent-color);
+    gap: 1rem;
+    padding: 1.25rem;
+    background: transparent !important;
+    border-radius: 0;
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
 }
 
 .contact-icon {
-    width: 50px;
-    height: 50px;
-    min-width: 50px;
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
     background: var(--primary-color);
-    border-radius: 10px;
+    border-radius: 4px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -180,34 +180,37 @@ body {
 }
 
 .contact-icon svg {
-    width: 28px;
-    height: 28px;
+    width: 22px;
+    height: 22px;
 }
 
 .contact-details {
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
 }
 
 .contact-label {
-    font-size: 0.875rem;
+    font-size: 0.75rem;
     color: var(--text-secondary);
     font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
-    margin-bottom: 0.25rem;
+    letter-spacing: 0.8px;
+    margin-bottom: 0.15rem;
 }
 
 .contact-value {
-    font-size: 1.125rem;
+    font-size: 0.95rem;
     color: var(--text-primary);
     font-weight: 500;
     text-decoration: none;
-    transition: color 0.3s ease;
+    transition: color 0.2s ease;
+    line-height: 1.4;
 }
 
 a.contact-value:hover {
-    color: var(--secondary-color);
+    color: var(--accent-light);
+    text-decoration: underline;
 }
 
 address.contact-value {
@@ -216,14 +219,15 @@ address.contact-value {
 
 /* Map Section */
 .map-section {
-    padding: 0 3rem 3rem 3rem;
+    padding: 2.5rem 3rem;
 }
 
 .map-wrapper {
-    border-radius: 8px;
+    border-radius: 4px;
     overflow: hidden;
     box-shadow: var(--shadow-md);
-    margin-top: 1.5rem;
+    margin-top: 1.25rem;
+    border: 1px solid var(--border-color);
 }
 
 .map-wrapper iframe {
@@ -294,16 +298,16 @@ address.contact-value {
 
     .contact-section,
     .map-section {
-        padding: 2rem 1.5rem;
+        padding: 1.5rem;
     }
 
     .contact-grid {
         grid-template-columns: 1fr;
-        gap: 1.5rem;
+        gap: 1rem;
     }
 
     .contact-card {
-        padding: 1.5rem;
+        padding: 1.25rem;
     }
 
     .section-title {
