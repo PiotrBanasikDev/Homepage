@@ -1,3 +1,25 @@
+// Mobile hamburger menu toggle
+(function () {
+  const btn = document.querySelector('.header-menu-btn');
+  const nav = document.getElementById('mobile-nav');
+  if (!btn || !nav) return;
+
+  btn.addEventListener('click', () => {
+    const isOpen = nav.classList.toggle('open');
+    btn.setAttribute('aria-expanded', isOpen);
+    nav.setAttribute('aria-hidden', !isOpen);
+  });
+
+  // Close mobile nav when a link is clicked
+  nav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      nav.classList.remove('open');
+      btn.setAttribute('aria-expanded', 'false');
+      nav.setAttribute('aria-hidden', 'true');
+    });
+  });
+})();
+
 // Header: fade from transparent green gradient to white on scroll
 (function () {
   const header = document.querySelector('.site-header');
