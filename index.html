@@ -1,204 +1,264 @@
 <!DOCTYPE html>
-
 <html lang="pl">
-  <head>
-    <meta charset="utf-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>Kancelaria Adwokacka - Piotr Banasik</title>
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <!-- Google Fonts: Playfair Display for headings and Lato for body -->
-    <link href="https://fonts.googleapis.com/css2?famialy=Lato:wght@300;400;700&amp;family=Playfair+Display:wght@400;700&amp;display=swap" rel="stylesheet"/>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              brand: {
-                light: '#f1f5f2', // Very light green-grey
-                DEFAULT: '#2d4a3e', // Sophisticated forest green
-                dark: '#1e332a', // Darker forest green
-                accent: '#c5a059', // Elegant gold accent
-              }
-            },
-            fontFamily: {
-              serif: ['"Playfair Display"', 'serif'],
-              sans: ['Lato', 'sans-serif'],
-            }
-          }
-        }
-      }
-    </script>
-    <style data-purpose="custom-typography">
-      body {
-        font-family: 'Lato', sans-serif;
-        scroll-behavior: smooth;
-      }
-      h1, h2, h3 {
-        font-family: 'Playfair Display', serif;
-      }
-      .text-balance {
-        text-wrap: balance;
-      }
-    </style>
-    <style data-purpose="layout-refinements">
-      .card-shadow {
-        box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
-      }
-      .map-container iframe {
-        width: 100%;
-        height: 100%;
-        border: 0;
-      }
-    </style>
-  </head>
-  <body class="bg-gray-50 text-slate-800">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kancelaria Adwokacka - Piotr Banasik</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Playfair+Display:wght@600&family=Rubik:ital,wght@0,400;0,500;0,600;1,400&family=Lato:wght@400&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles/style.css"/>
+</head>
+<body>
 
-    <!-- BEGIN: Header -->
-    <header class="bg-white border-b border-gray-200 sticky top-0 z-50">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-        <div class="flex flex-col">
-          <span class="text-xl font-serif font-bold tracking-tight text-brand uppercase">Kancelaria Adwokacka</span>
-          <div class="h-1 w-12 bg-brand-accent mt-1"></div>
+  <!-- Header (sticky) -->
+  <header class="site-header">
+    <div class="header-container">
+      <div class="header-logo">KANCELARIA ADWOKACKA</div>
+      <nav class="header-nav">
+        <a href="#specjalizacje">Specjalizacje</a>
+        <a href="#o-kancelarii">O kancelarii</a>
+        <a href="#kontakt">Kontakt</a>
+      </nav>
+      <div class="header-logo-img">
+        <img src="images/adwokatura_symbol.png" alt="Adwokatura Polska"/>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-container">
+      <div class="hero-content">
+        <div class="hero-text">
+          <div class="hero-heading-group">
+            <p class="hero-overline">ADWOKAT</p>
+            <h1 class="hero-name">Piotr Banasik</h1>
+          </div>
+          <p class="hero-description">
+            Adwokat z kilkunastoletnim doświadczeniem.<br/>
+            Kompleksowa obsługa prawna w zakresie <strong>prawa cywilnego</strong>, <strong>rodzinnego</strong> oraz <strong>karnego</strong>.
+          </p>
+          <div class="hero-location">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+            <span>ul. Struga 26 lok. 5, III piętro, 90-513 Łódź</span>
+          </div>
         </div>
-        <div class="flex items-center gap-3">
-          <!-- Logo Adwokatury Polskiej -->
-          <img src="AP_symbol_PANTONE_3435.jpg" alt="Adwokatura Polska" class="h-10 w-auto md:h-12 object-contain object-right" />
+        <div class="hero-actions">
+          <a href="tel:+48506113886" class="btn-primary">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+            </svg>
+            Zadzwoń: +48 506 113 886
+          </a>
+          <a href="mailto:piotrbanasik82@wp.pl" class="btn-secondary">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+            </svg>
+            Napisz
+          </a>
         </div>
       </div>
-    </header>
-    <!-- END: Header -->
+      <div class="hero-image">
+        <img src="images/banasik_big.png" alt="Adwokat Piotr Banasik"/>
+      </div>
+    </div>
+  </section>
 
-    <main>
-      <!-- BEGIN: Hero Section -->
-      <section class="relative bg-brand text-white overflow-hidden">
-        <!-- Decorative background element -->
-        <div class="absolute inset-0 opacity-10 pointer-events-none">
-          <svg class="h-full w-full" preserveaspectratio="none" viewbox="0 0 100 100">
-            <path d="M0 100 L100 0 L100 100 Z" fill="currentColor"></path>
+  <!-- Specjalizacje -->
+  <section class="features" id="specjalizacje">
+    <div class="container">
+      <div class="section-header centered">
+        <div class="heading-group">
+          <p class="overline">SPECJALIZACJE</p>
+          <h2 class="section-heading">Obszary praktyki</h2>
+        </div>
+        <p class="section-description">
+          Zapewniam kompleksową obsługę prawną w zakresie prowadzenia sporów sądowych na płaszczyźnie prawa cywilnego, prawa rodzinnego oraz postępowań karnych zarówno na etapie postępowania przygotowawczego jak i postępowania sądowego.
+        </p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-item">
+          <div class="feature-icon">
+            <img src="images/icons/scale.svg" alt="" aria-hidden="true" width="48" height="48"/>
+          </div>
+          <div class="feature-text">
+            <p class="feature-title">Prawo Cywilne</p>
+            <p class="feature-desc">Sprawy o zapłatę, zniesienie współwłasności, postępowania z zakresu prawa spadkowego.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">
+            <img src="images/icons/user-group.svg" alt="" aria-hidden="true" width="48" height="48"/>
+          </div>
+          <div class="feature-text">
+            <p class="feature-title">Prawo Rodzinne</p>
+            <p class="feature-desc">Sprawy rozwodowe, ustanowienie rozdzielności majątkowej, podział majątku wspólnego.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">
+            <img src="images/icons/shield-check.svg" alt="" aria-hidden="true" width="48" height="48"/>
+          </div>
+          <div class="feature-text">
+            <p class="feature-title">Prawo Karne</p>
+            <p class="feature-desc">Obrona w postępowaniach przygotowawczych oraz sądowym na każdym etapie.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">
+            <img src="images/icons/office-building.svg" alt="" aria-hidden="true" width="48" height="48"/>
+          </div>
+          <div class="feature-text">
+            <p class="feature-title">Obsługa Przedsiębiorców</p>
+            <p class="feature-desc">Kompleksowa obsługa prawna firm oraz podmiotów Skarbu Państwa.</p>
+          </div>
+        </div>
+      </div>
+      <div class="features-cta">
+        <a href="#kontakt" class="btn-outline">Skontaktuj się z nami</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonial -->
+  <section class="testimonial">
+    <div class="testimonial-container">
+      <div class="testimonial-content">
+        <img src="images/icons/Quote.svg" alt="" aria-hidden="true" class="testimonial-quote-icon"/>
+        <p class="testimonial-text">
+          W trakcie wieloletniej praktyki zdobyłem ponadto doświadczenie w obsłudze przedsiębiorców oraz podmiotów Skarbu Państwa, które wykorzystuję w codziennie świadczonej na rzecz Klientów pomocy prawnej.
+        </p>
+      </div>
+      <div class="testimonial-author">
+        <div class="testimonial-avatar">
+          <img src="images/banasik_small_circle.png" alt="Piotr Banasik"/>
+        </div>
+        <div>
+          <p class="testimonial-name">Piotr Banasik</p>
+          <p class="testimonial-role">Adwokat</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- O kancelarii -->
+  <section class="about" id="o-kancelarii">
+    <div class="container">
+      <div class="section-header centered">
+        <div class="heading-group">
+          <p class="overline">O KANCELARII</p>
+          <h2 class="section-heading">Doświadczenie i profesjonalizm</h2>
+        </div>
+        <p class="section-description">
+          Doświadczony zespół pracowników Kancelarii oraz osób stale współpracujących z Kancelarią, gwarantuje rzetelną opiekę prawną Klientów, zarówno w toku postępowań przed Sądami jak i organami administracji publicznej.
+        </p>
+      </div>
+      <div class="about-features">
+        <div class="about-feature">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
           </svg>
+          <span>Kilkanaście lat doświadczenia zawodowego</span>
         </div>
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 relative z-10">
-          <div class="flex flex-col md:flex-row items-center gap-12">
-            <!-- Portrait Image Container -->
-            <div class="w-64 h-64 md:w-50 md:h-5xs0 flex-shrink-0 relative">
-              <div class="absolute inset-0 rounded-full border-4 border-brand-accent/30 scale-105"></div>
-              <img alt="Adwokat Piotr Banasik" class="w-full h-full object-cover rounded-full border-4 border-white shadow-2xl" src="pbanasik.jpg"/>
-            </div>
-            <!-- Hero Content -->
-            <div class="text-center md:text-left">
-              <h1 class="text-4xl md:text-6xl font-serif font-bold mb-2">Piotr Banasik</h1>
-              <p class="text-xl md:text-2xl text-brand-accent font-medium mb-6 uppercase tracking-widest">Adwokat</p>
-              <!-- <p class="text-lg text-brand-light/90 max-w-2xl leading-relaxed text-balance">
-                Zapewniam profesjonalne doradztwo prawne oraz kompleksową obsługę prawną dla klientów indywidualnych i firm. Specjalizuję się w prawie cywilnym, gospodarczym oraz prowadzeniu postępowań sądowych.
-              </p> -->
-            </div>
-          </div>
+        <div class="about-feature">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+          </svg>
+          <span>Indywidualne podejście do każdej sprawy</span>
         </div>
-      </section>
-      <!-- END: Hero Section -->
-      <!-- BEGIN: About / Experience Section -->
-      <section class="py-20 bg-white" id="o-mnie">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div class="text-center mb-16">
-            <h2 class="text-3xl md:text-4xl font-serif font-bold text-brand mb-4">Doświadczenie i Profesjonalizm</h2>
-            <div class="h-1 w-20 bg-brand-accent mx-auto"></div>
-          </div>
-          <div class="space-y-8 text-lg leading-relaxed text-gray-700">
-            <p data-purpose="experience-p1">
-              Jako Adwokat z kilkunastoletnim doświadczeniem, zapewniam kompleksową obsługę prawną w zakresie prowadzenia sporów sądowych na płaszczyźnie prawa cywilnego (sprawy o zapłatę, sprawy o zniesienie współwłasności, postępowania z zakresu prawa spadkowego), prawa rodzinnego (sprawy o rozwiązanie małżeństwa przez rozwód, sprawy o ustanowienie rozdzielności majątkowej, sprawy o podział majątku wspólnego) oraz postępowań karnych zarówno na etapie postępowania przygotowawczego jak i postępowania sądowego.
-            </p>
-            <p class="border-l-4 border-brand-accent pl-6 italic bg-brand-light/30 py-4" data-purpose="experience-p2">
-              W trakcie wieloletniej praktyki zdobyłem ponadto doświadczenie w obsłudze przedsiębiorców oraz podmiotów Skarbu Państwa, które wykorzystuję w codziennie świadczonej na rzecz Klientów pomocy prawnej.
-            </p>
-            <p data-purpose="experience-p3">
-              Doświadczony zespół pracowników Kancelarii oraz osób stale współpracujących z Kancelarią, gwarantuje rzetelną opiekę prawną Klientów, zarówno w toku postępowań przed Sądami jak i organami administracji publicznej. W codziennej pracy kieruję się zasadą możliwie indywidualnego podejścia do każdego powierzanego Kancelarii zlecenia, które pragnę realizować z pełnym poszanowaniem dla interesów Mocodawców.
-            </p>
-          </div>
+        <div class="about-feature">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+          </svg>
+          <span>Obsługa przedsiębiorców i podmiotów publicznych</span>
         </div>
-      </section>
-      <!-- END: About / Experience Section -->
-      <!-- BEGIN: Contact Cards Section -->
-      <section class="py-20 bg-brand-light" id="kontakt">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div class="text-center mb-16">
-            <h2 class="text-3xl md:text-4xl font-serif font-bold text-brand mb-4">Kontakt</h2>
-            <p class="text-gray-600 uppercase tracking-widest text-sm">Zapraszamy do kontaktu z naszą kancelarią</p>
-          </div>
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <!-- Email Card -->
-            <div class="bg-white p-8 card-shadow text-center flex flex-col items-center group hover:bg-brand transition-colors duration-300">
-              <div class="w-16 h-16 bg-brand-light rounded-full flex items-center justify-center mb-6 group-hover:bg-brand-accent transition-colors">
-                <svg class="h-8 w-8 text-brand group-hover:text-brand-dark" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
-                </svg>
-              </div>
-              <h3 class="text-xl font-bold mb-2 group-hover:text-white">Email</h3>
-              <a class="text-brand font-medium group-hover:text-brand-accent break-all" href="mailto:piotrbanasik82@wp.pl">piotrbanasik82@wp.pl</a>
-            </div>
-            <!-- Phone Card -->
-            <div class="bg-white p-8 card-shadow text-center flex flex-col items-center group hover:bg-brand transition-colors duration-300">
-              <div class="w-16 h-16 bg-brand-light rounded-full flex items-center justify-center mb-6 group-hover:bg-brand-accent transition-colors">
-                <svg class="h-8 w-8 text-brand group-hover:text-brand-dark" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
-                </svg>
-              </div>
-              <h3 class="text-xl font-bold mb-2 group-hover:text-white">Telefon</h3>
-              <a class="text-brand font-medium group-hover:text-brand-accent" href="tel:+48506113886">+48 506 113 886</a>
-            </div>
-            <!-- Address Card -->
-            <div class="bg-white p-8 card-shadow text-center flex flex-col items-center group hover:bg-brand transition-colors duration-300">
-              <div class="w-16 h-16 bg-brand-light rounded-full flex items-center justify-center mb-6 group-hover:bg-brand-accent transition-colors">
-                <svg class="h-8 w-8 text-brand group-hover:text-brand-dark" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
-                  <path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
-                </svg>
-              </div>
-              <h3 class="text-xl font-bold mb-2 group-hover:text-white">Adres</h3>
-              <p class="text-brand font-medium group-hover:text-brand-accent">
-                ul. Struga 26 lok. 5, III piętro<br/>
-                90-513 Łódź
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- END: Contact Cards Section -->
-      <!-- BEGIN: Location / Map Section -->
-      <section class="py-20 bg-white" id="lokalizacja">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div class="text-center mb-12">
-            <h2 class="text-3xl font-serif font-bold text-brand mb-4">Nasza Lokalizacja</h2>
-            <div class="h-1 w-20 bg-brand-accent mx-auto"></div>
-          </div>
-          <div class="map-container h-[450px] w-full rounded-lg overflow-hidden card-shadow bg-gray-200 border border-gray-100">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2467.8!2d19.4534!3d51.7592!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471bcb8e4e6e7e6d%3A0x0!2sStruga%2026%2C%2090-513%20%C5%81%C3%B3d%C5%BA!5e0!3m2!1spl!2spl!4v1234567890"
-              width="100%"
-              height="100%"
-              style="border:0;"
-              allowfullscreen=""
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-              title="Mapa lokalizacji Kancelarii Piotr Banasik"></iframe>
-          </div>
-        </div>
-      </section>
-      <!-- END: Location / Map Section -->
-    </main>
-
-    <!-- BEGIN: Footer -->
-    <footer class="bg-brand-dark text-white py-12">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-8">
-        <div class="text-center md:text-left">
-          <span class="text-lg font-serif font-bold tracking-tight uppercase">Piotr Banasik</span>
-          <p class="text-brand-light/50 text-sm mt-1 uppercase tracking-widest">Kancelaria Adwokacka</p>
-        </div>
-        <div class="text-center text-brand-light/60 text-sm">
-          © 2026 Adwokat Piotr Banasik. Wszelkie prawa zastrzeżone.
+        <div class="about-feature">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+          </svg>
+          <span>Doświadczony zespół współpracowników</span>
         </div>
       </div>
-    </footer>
-    <!-- END: Footer -->
-  </body>
+    </div>
+  </section>
+
+  <!-- Kontakt -->
+  <section class="contact" id="kontakt">
+    <div class="contact-container">
+      <div class="contact-left">
+        <div class="contact-heading-group">
+          <p class="contact-overline">KONTAKT</p>
+          <h2 class="contact-heading">Skontaktuj się z nami</h2>
+        </div>
+        <p class="contact-description">
+          Zapraszamy do kontaktu z naszą kancelarią.<br/>
+          Chętnie odpowiemy na wszystkie pytania.
+        </p>
+      </div>
+      <div class="contact-right">
+        <div class="contact-item">
+          <div class="contact-item-label">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+            </svg>
+            <span>Telefon</span>
+          </div>
+          <a href="tel:+48506113886" class="contact-item-value">+48 506 113 886</a>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-label">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+            </svg>
+            <span>E-mail</span>
+          </div>
+          <a href="mailto:piotrbanasik82@wp.pl" class="contact-item-value">piotrbanasik82@wp.pl</a>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-label">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+            <span>Adres</span>
+          </div>
+          <p class="contact-item-value">ul. Struga 26 lok. 5, III piętro, 90-513 Łódź</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Map -->
+  <section class="map-section">
+    <div class="map-wrapper">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2467.8!2d19.4534!3d51.7592!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471bcb8e4e6e7e6d%3A0x0!2sStruga%2026%2C%2090-513%20%C5%81%C3%B3d%C5%BA!5e0!3m2!1spl!2spl!4v1234567890"
+        width="100%"
+        height="100%"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Mapa lokalizacji Kancelarii Piotr Banasik">
+      </iframe>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-logo">KANCELARIA ADWOKACKA</div>
+      <p class="footer-copyright">© 2026 Adwokat Piotr Banasik. Wszelkie prawa zastrzeżone.</p>
+      <div class="footer-logo-img">
+        <img src="images/adwokatura_symbol.png" alt="Adwokatura Polska"/>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
 </html>
