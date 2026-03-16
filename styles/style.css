@@ -128,16 +128,18 @@ a {
 
 /* ===== HERO ===== */
 .hero {
-  padding: 64px 0 0;
+  /* Pull up behind the sticky header so the gradient bleeds through the transparent header */
+  margin-top: calc(-1 * var(--header-height));
+  padding-top: var(--header-height);
   border-bottom: 1px solid var(--border);
-  overflow: hidden;
-  background: linear-gradient(150deg, #d8e8df 0%, #eaf2ec 45%, #f5f9f6 100%);
+  /* overflow must NOT be hidden — it would break position:sticky on the header inside */
+  background: linear-gradient(180deg, #E7FCF1 0%, #FFFFFF 100%);
 }
 
 .hero-container {
   max-width: var(--container);
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 30px 24px 0;
   display: flex;
   gap: 32px;
   align-items: center;
