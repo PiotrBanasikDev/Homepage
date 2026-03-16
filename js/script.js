@@ -2,21 +2,29 @@
 (function () {
   const btn = document.querySelector('.header-menu-btn');
   const nav = document.getElementById('mobile-nav');
+  const closeBtn = nav && nav.querySelector('.mobile-nav-close-btn');
   if (!btn || !nav) return;
 
-  btn.addEventListener('click', () => {
-    const isOpen = nav.classList.toggle('open');
-    btn.setAttribute('aria-expanded', isOpen);
-    nav.setAttribute('aria-hidden', !isOpen);
-  });
+  function openMenu() {
+    nav.classList.add('open');
+    btn.setAttribute('aria-expanded', 'true');
+    nav.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeMenu() {
+    nav.classList.remove('open');
+    btn.setAttribute('aria-expanded', 'false');
+    nav.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+
+  btn.addEventListener('click', openMenu);
+  if (closeBtn) closeBtn.addEventListener('click', closeMenu);
 
   // Close mobile nav when a link is clicked
   nav.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      nav.classList.remove('open');
-      btn.setAttribute('aria-expanded', 'false');
-      nav.setAttribute('aria-hidden', 'true');
-    });
+    link.addEventListener('click', closeMenu);
   });
 })();
 
