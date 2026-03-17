@@ -642,15 +642,24 @@ a {
 .contact-item-value {
   font-family: var(--font-body);
   font-weight: 400;
-  font-size: 16px;
+  font-size: 18px;
   color: var(--text-gray-200);
   line-height: 24px;
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 a.contact-item-value:hover {
   color: var(--white);
-  text-decoration: underline;
+  text-decoration: none;
+}
+
+.contact-item-value-address {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 18px;
+  color: var(--text-gray-200);
+  line-height: 24px;
+  text-decoration: none;
 }
 
 /* ===== MAP ===== */
@@ -1015,5 +1024,9 @@ a.contact-item-value:hover {
   .footer-copyright {
     white-space: normal;
     text-align: center;
+  }
+
+  .contact-item-value {
+    text-decoration: underline;
   }
 }
